@@ -1,5 +1,10 @@
 package br.ufal.ic.p3.payroll.model;
 
+/**
+ * 
+ * @author Ana Paula
+ *
+ */
 public class NonCommissionedEmployee extends SalariedEmployee{
 
 	public NonCommissionedEmployee(String name, String address,
@@ -7,9 +12,4 @@ public class NonCommissionedEmployee extends SalariedEmployee{
 		super(name, address, method, salary);
 	}
 	
-	@Override
-	public String toString() {
-		return super.toString();
-	}
-
 }

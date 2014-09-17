@@ -1,8 +1,13 @@
 package br.ufal.ic.p3.payroll.model;
 
+/**
+ * 
+ * @author Ana Paula
+ *
+ */
 public abstract class Employee {
 
-	private static long id = -1;
+	private long id;
 	private String name;
 	private String address;
 	private PaymentMethod paymentMethod;
@@ -13,7 +18,6 @@ public abstract class Employee {
 
 	public Employee(String name, String address, PaymentMethod paymentMethod) {
 		super();
-		id++;
 		this.name = name;
 		this.address = address;
 		this.paymentMethod = paymentMethod;
@@ -45,6 +49,10 @@ public abstract class Employee {
 
 	public long getId() {
 		return id;
+	}
+	
+	public void setId(long id){
+		this.id = id;
 	}
 
 	@Override

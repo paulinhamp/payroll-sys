@@ -3,6 +3,11 @@ package br.ufal.ic.p3.payroll.model;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 
+ * @author Ana Paula
+ *
+ */
 public class HourlyEmployee extends Employee {
 
 	private float hourlySalary;

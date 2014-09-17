@@ -3,6 +3,11 @@ package br.ufal.ic.p3.payroll.model;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 
+ * @author Ana Paula
+ *
+ */
 public class Syndicate {
 
 	private static Syndicate syndicate = null;
@@ -10,7 +15,6 @@ public class Syndicate {
 	private List<Employee> employees;
 
 	private Syndicate() {
-		syndicate = new Syndicate();
 		employees = new ArrayList<Employee>();
 	}
 
