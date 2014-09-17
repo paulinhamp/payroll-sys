@@ -4,10 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Syndicate {
-	
+
+	private static Syndicate syndicate = null;
+
 	private List<Employee> employees;
-	
-	public Syndicate() {
+
+	private Syndicate() {
+		syndicate = new Syndicate();
 		employees = new ArrayList<Employee>();
 	}
 
@@ -17,6 +20,13 @@ public class Syndicate {
 
 	public void setEmployees(List<Employee> employees) {
 		this.employees = employees;
+	}
+
+	public static Syndicate getInstance() {
+		if (syndicate == null) {
+			syndicate = new Syndicate();
+		}
+		return syndicate;
 	}
 
 }

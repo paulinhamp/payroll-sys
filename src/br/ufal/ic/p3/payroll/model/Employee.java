@@ -1,19 +1,22 @@
 package br.ufal.ic.p3.payroll.model;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public abstract class Employee {
 
-	private long id;
+	private static long id = -1;
 	private String name;
 	private String address;
 	private PaymentMethod paymentMethod;
-	private List<Payroll> payrolls;
 
 	public Employee() {
-		payrolls = new ArrayList<Payroll>();
 		// TODO Auto-generated constructor stub
+	}
+
+	public Employee(String name, String address, PaymentMethod paymentMethod) {
+		super();
+		id++;
+		this.name = name;
+		this.address = address;
+		this.paymentMethod = paymentMethod;
 	}
 
 	public String getName() {
@@ -44,4 +47,9 @@ public abstract class Employee {
 		return id;
 	}
 
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "test --> " + id + " " + getName();
+	}
 }

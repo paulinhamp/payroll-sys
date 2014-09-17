@@ -4,8 +4,9 @@ public abstract class SalariedEmployee extends Employee{
 	
 	private float salary;
 	
-	public SalariedEmployee() {
-		// TODO Auto-generated constructor stub
+	public SalariedEmployee(String name, String address, PaymentMethod method, float salary) {
+		super(name, address, method);
+		this.salary = salary;
 	}
 
 	public float getSalary() {

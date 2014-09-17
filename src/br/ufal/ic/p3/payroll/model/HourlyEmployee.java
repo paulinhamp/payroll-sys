@@ -5,19 +5,21 @@ import java.util.List;
 
 public class HourlyEmployee extends Employee {
 
-	private float hourlySalaried;
+	private float hourlySalary;
 	private List<Timecard> timecards;
 
-	public HourlyEmployee() {
+	public HourlyEmployee(String name, String address, PaymentMethod method, float hourlySalary) {
+		super(name, address, method);
+		this.hourlySalary = hourlySalary;
 		timecards = new ArrayList<Timecard>();
 	}
 
-	public float getHourlySalaried() {
-		return hourlySalaried;
+	public float getHourlySalary() {
+		return hourlySalary;
 	}
 
-	public void setHourlySalaried(float hourlySalaried) {
-		this.hourlySalaried = hourlySalaried;
+	public void setHourlySalary(float hourlySalary) {
+		this.hourlySalary = hourlySalary;
 	}
 
 	public List<Timecard> getTimecards() {
